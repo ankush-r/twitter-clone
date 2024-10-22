@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+</head>
+<body>
+    <div class="main-container">
+        <div class="navigation-section">
+            <div class="all-options">
+                <div class="navigation-item"><img src="icons/premium.png" alt=""> </div>
+                <div class="navigation-item"><img src ="icons/home.png"  alt=""> <p>Home</p></div>
+                <div class="navigation-item"><img src="icons/explore.png"  alt=""> <p>Explore</p></div>
+                <div class="navigation-item"><img src="icons/notifications.png"  alt=""> <p>Notifications</p></div>
+                <div class="navigation-item"><img src="icons/messages.png"  alt=""><p>Messages</p></div>
+                <div class="navigation-item"><img src ="icons/grok.png"  alt=""> <p>Grok</p></div>
+                <div class="navigation-item"><img src="icons/lists.png"  alt=""><p>Lists</p></div>
+                <div class="navigation-item"><img src="icons/bookmarks.png"  alt=""><p>Bookmarks</p></div>
+                <div class="navigation-item"><img src="icons/communities.png"  alt=""><p>Communities</p></div>
+                <div class="navigation-item"><img src="icons/premium.png"  alt=""><p>Premium</p></div>
+                <div class="navigation-item"><img src="icons/profile.png"  alt=""><p>Profile</p></div>
+                <div class="navigation-item"><img src="icons/more.png"  alt=""><p>More</p></div>
+                <div class="post__button-navigation"><button value="post-pop" id="post__button">Post</button></div>
+                <div class="profile-item">
+                    <div class="first-column">
+                        <img src="icons/profilepicture.png" alt="profile picture image">
+                    </div>
+                    
+                    <div class="profile-name">
+                        <span class="account-name" id="changeFirst">Nitesh Gupta</span>
+                        <span class="user-name" id="changeSecond">@nit_hck</span>
+                    </div>
+                    
+                    <div class="extra-column">
+                        <img src="post-elements/options.png" alt="option image">
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+
+        <!--message active profiles-->
+        <div id="active__users">
+            NO Active Users:
+            
+        </div>
+
+        <div class="message-display">
+            <div id="message-container">
+
+            </div>
+            <div class="input-message">
+                <input type="text" class="messageBox" id="inputMessage" placeholder="write a message"><button id="send"><i class="fi fi-br-paper-plane-top"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script>
+<script src="./messageJS.js">
+
+</script>
+</html>

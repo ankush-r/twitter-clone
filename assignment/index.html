@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+</head>
+<body>
+    <div class="main-container">
+        <div class="navigation-section">
+            <div class="all-options">
+                <div class="navigation-item"><img src="icons/premium.png" alt="this is an icon"> </div>
+                <div class="navigation-item"><img src ="icons/home.png" alt="this is an icon"> <p>Home</p></div>
+                <div class="navigation-item"><img src="icons/explore.png" alt="this is an icon"> <p>Explore</p></div>
+                <div class="navigation-item"><img src="icons/notifications.png" alt="this is an icon"> <p>Notifications</p></div>
+
+                <div class="navigation-item">
+                    <img src="icons/messages.png" alt="this is an icon"><a href="./message.html" style="text-decoration: none;color: white;" onclick="fetchMessage()">
+                   <p>Messages</p></div>
+                </a>
+
+                <div class="navigation-item"><img src ="icons/grok.png" alt="this is an icon"> <p>Grok</p></div>
+                <div class="navigation-item"><img src="icons/lists.png"  alt="this is an icon"><p>Lists</p></div>
+                <div class="navigation-item"><img src="icons/bookmarks.png" alt="this is an icon"><p>Bookmarks</p></div>
+                <div class="navigation-item"><img src="icons/communities.png" alt="this is an icon"><p>Communities</p></div>
+                <div class="navigation-item"><img src="icons/premium.png" alt="this is an icon"><p>Premium</p></div>
+                <div class="navigation-item"><img src="icons/profile.png" alt="this is an icon"><p>Profile</p></div>
+                <div class="navigation-item"><img src="icons/more.png" alt="this is an icon"><p>More</p></div>
+                <div class="post__button-navigation"><button value="post-pop" id="post__button">Post</button></div>
+                <div class="profile-item">
+                    <div class="first-column">
+                        <img src="icons/profilepicture.png" id="profilePic" alt="this is an icon" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    
+                    <div class="profile-name">
+                        <span class="account-name" id="changeUsername">Nitesh Gupta</span>
+                        <span class="user-name" id="changeUser">@nit_hck</span>
+                    </div>
+                    
+                    <div class="extra-column">
+                        <img src="post-elements/options.png" alt="this is an icon">
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+        <div class="mobile-navigation" id="nav-mob">
+            <div class="first-basic">
+                <div class="upper-basic">
+                    <div class="profile-back">
+                        <button class="profile-icon" onclick="bringAll()"><img src="icons/profilepicture.png" alt="this is an icon"></button>
+                    </div>
+                    <div>
+                        <img src="icons/plus.png" class="pl" alt="this is an icon">
+                    </div>
+                </div>
+                <div class="lower-basic">
+                    Nitesh Gupta<br>
+                    <span class="nav-style">@nit_hck</span>
+                    <br>
+                    <span style="font-size: large;">1</span> <span class="nav-style">Following</span>
+                    &nbsp;
+                    <span style="font-size: large;">0</span> <span class="nav-style">Followers</span>
+                </div>
+            </div>
+            <div class="navigation-item" style="padding-top: 0.5rem;"><img src="icons/profile.png" alt="this is an icon"><p>Profile</p></div>
+            <div class="navigation-item" style="padding-top: 0.5rem;"><img src="icons/premium.png" alt="this is an icon"><p>Premium</p></div>
+            <div class="navigation-item" style="padding-top: 0.5rem;"><img src="icons/lists.png" alt="this is an icon"><p>Lists</p></div>
+            <div class="navigation-item" style="padding-top: 0.5rem;"><img src="icons/bookmarks.png" alt="this is an icon"><p>Bookmarks</p></div>
+            <div class="navigation-item" style="padding-top: 0.5rem;"><img src="icons/communities.png" alt="this is an icon"><p>Communities</p></div>
+            <div class="navigation-item" style="padding-top: 0.5rem;"><img src="icons/money1.png" alt="this is an icon"><p>Monetization</p></div>
+            <div class="navigation-item" style="padding-top: 0.5rem;"><img src="icons/setting1.png" alt="this is an icon"><p>Settings and privacy</p></div>
+            <div class="navigation-item" style="padding-top: 0.5rem;"><img src="icons/logout1.png" alt="this is an icon"><p>Logout</p></div>
+        </div>
+        <div class="content-posts">
+                <div class="mobile__heading">
+                    <div class="icon">
+                        <button class="profile-icon" onclick="loadnavbar()">
+                            <img src="icons/profilepicture.png" alt="this is an icon">
+                        </button>
+                    </div>
+                    <div class="twitter__logo">
+                        <img src="icons/premium.png" alt="this is an icon">
+                    </div>
+                    <div class="setting">
+                        <img src="post-elements/setting.png" alt="this is an icon"> 
+                    </div>
+            </div>
+            <div class="content-title">
+                <div class="content-title__foryou">For you</div>
+                <div class="content-title__following">Following</div>
+            </div>
+            <div class="tweet-box" id="tweeter">
+                <div class="mobile-buttons" id="buttons-above">
+                    <div class="back-button">
+                        <button id="back" onclick="goBackFunction()">
+                            <img src="post-elements/back.png" alt="this is an icon">
+                        </button>
+                    </div>
+                    <div class="choices">
+                        <span class="draft">
+                            Drafts
+                        </span>
+                        <button class="post-mobile" onclick="posttweet()">
+                            Post
+                        </button>
+                    </div>
+                </div>
+                <div class="optional">
+                    <div class="profile__pic_post">
+                        <img src="icons/profilepicture.png" alt="this is an icon" id="postpic" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                    </div>
+    
+                    <div class="other-items">
+                        <div class="upper-text">
+                            <textarea placeholder="What is happening?!" class="post-input" rows="5" cols="52" oninput="handleTextareaInput()"></textarea>
+                        </div>
+                        <img id="image-preview">
+                        <div class="icons-tweet">
+                            <div class="list-icons">
+                                <ul>
+                                    <li>
+                                        <input onchange="previewImage(event)" type="file" class="image-input" accept="image/*" name="image-input" id ="image-input">
+                                        <label for="image-input" class="image-label">
+                                          <img src="tweet-images/first.png" alt="Add Image">
+                                        </label>
+                                    </li>
+                                    <li>
+                                          <img src="tweet-images/second.png" alt="Add Image">
+                                    </li>
+                                    <li>
+                                        <img src="tweet-images/third.png" alt="this is an icon">
+                                    </li>
+                                    <li>
+                                        <img src="tweet-images/four.png" alt="this is an icon">
+                                    </li>
+                                    <li>
+                                        <img src="tweet-images/five.png" alt="this is an icon">
+                                    </li>
+                                    <li>
+                                        <img src="tweet-images/six.png" alt="this is an icon">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="post-button">
+                                <button class="tweet-btn" value="post" onclick="posttweet()" disabled>Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="posts">
+                <ul class="post-list" style="padding-left: 0px;">
+
+                </ul>
+            </div>
+        </div>
+        <div id="post-invoker">
+            <button class="invoke" onclick="bringTweet()">
+                <img src="post-elements/mobile-post.png" alt="this is an icon">
+            </button>
+        </div>
+        <div id="footer" >
+            <i><img src="icons/home.png" alt="this is an icon"></i>
+            <i><img src="icons/explore.png" alt="this is an icon"></i>
+            <i><img src="icons/grok.png" alt="this is an icon"></i>
+            <i><img src="icons/notifications.png" alt="this is an icon"></i>
+            <i><a href="./message.html" style="text-decoration: none;color: white;"><img src="icons/messages.png" alt="this is an icon"></a></i>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
